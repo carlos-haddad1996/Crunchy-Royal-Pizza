@@ -1,0 +1,39 @@
+
+<br>
+
+
+
+<div class="row">
+<div class="col-md-4">
+    <!--MiloginForm es de angular es un identificador de tipo ngForm -->
+  <h1>Registro</h1>
+
+  <form autocomplete="off">
+    <div class="form-group" >
+        <label for="nombre">Nombre:</label>
+        <input (ngModel)="nombre" name="nombre" id="nombre" type="text" class="form-control" placeholder="Nombre" />
+      </div>
+      <div class="form-group" >
+        <label for="apellido">Apellido:</label>
+        <input (ngModel)="apellido" name="apellido" id="apellido" type="text" class="form-control" placeholder="Apellido" />
+      </div>
+      <div class="form-group" >
+        <label for="age">Age:</label>
+        <input (ngModel)="age" name="age" id="age" type="text" class="form-control" placeholder="Age" />
+      </div>
+    <div class="form-group" >
+      <label for="userName">Nombre de Usuario:</label>
+      <input (ngModel)="userName" name="userName" id="userName" type="text" class="form-control" placeholder="Username" />
+    </div>
+    <div class="form-group" >
+      <label for="password">Contraseña:</label>
+      <input (ngModel)="password" name="password" id="password" type="password" class="form-control"placeholder="Password" />
+    </div>
+    
+       
+    <button class="button" style="vertical-align:middle"><span>Enviar Solicitud</span></button>
+    <br><br>
+    <button class="cancelbtn" style="vertical-align:middle"><span>Cancel</span></button>
+
+  </form>
+</div>

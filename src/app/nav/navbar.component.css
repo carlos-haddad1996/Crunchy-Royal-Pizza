@@ -1,0 +1,11 @@
+.a{
+    color: white;
+}
+
+navbar navbar-dark bg-dark{
+    background-color: rgb(30, 255, 0);
+}
+
+.active{
+    color: orange;
+  }
