@@ -1,22 +1,27 @@
+<div class="container">
+  <h1>Iniciar Sesión</h1>
 
-<br>
-<div class="row">
-<div class="col-md-4">
-    <!--MiloginForm es de angular es un identificador de tipo ngForm -->
-  <h1>Login</h1>
-  <form autocomplete="off"  (ngSubmit)="fnLogin(MiloginForm.value)">
-    <div class="form-group" >
-      <label for="userName">Nombre de Usuario:</label>
-      <input (ngModel)="userName" name="userName" id="userName" type="text" class="form-control" placeholder="Username" />
-    </div>
-    <div class="form-group" >
-      <label for="password">Contraseña:</label>
-      <input (ngModel)="password" name="password" id="password" type="password" class="form-control"placeholder="Password" />
-    </div>
-       
-    <button class="button" style="vertical-align:middle"><span>Login</span></button>
-    <br><br>
-    <button class="button" style="vertical-align:middle" (click)="fnCancel()"><span>Cancel</span></button>
+  <div class="col-md-6">
+    
+    <form [formGroup]="perfilForm" autocomplete="off" (ngSubmit)="fnUpdate(perfilForm.value)" novalidate>
 
-  </form>
+
+      <div class="form-group" [ngClass]="{'error': NoValidUsername()}">
+        <label for="username">Usuario:</label>
+        <em *ngIf="NoValidUsername() && perfilForm.controls.username?.errors.required">Este campo es requerido</em>
+        <input formControlName="username" id="username" type="text" class="form-control" placeholder="Usuario de la cuenta..." />
+      </div>
+
+      <div class="form-group" [ngClass]="{'error': NoValidpassword()}">
+        <label for="password">Contraseña:</label>
+        <em *ngIf="NoValidpassword() && perfilForm.controls.password?.errors.required">Este campo es requerido</em>
+        <input formControlName="password" id="password" type="password" class="form-control" placeholder="Contraseña..." />
+      </div>
+
+
+      <button class="button" type="submit" style="vertical-align:middle" ><span>Entrar</span></button>
+  <br><br>
+  <button class="cancelbtn" (click)="fnCancel()" style="vertical-align:middle"><span>Cancel</span></button>
+    </form>
+  </div>
 </div>

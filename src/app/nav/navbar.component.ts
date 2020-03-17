@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ClassServiceAuth } from '../Shared/autorize.service';
 
 @Component({
   selector: 'navbarcmp',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ClassNavbaraComponent {
   title = 'Crunchy-Royal-Pizza';
+  constructor(public auth:ClassServiceAuth) {
+        
+  }
 }

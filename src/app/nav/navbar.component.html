@@ -8,7 +8,7 @@
     <a class="nav-link" href="#" >PRMOCIONES</a>
     <a class="nav-link" [routerLink]="['login']" >LOGIN</a>
     <a class="nav-link" [routerLink]="['registro']">REGISTRO</a>
-    <a [routerLink]="['/login']">Bienvenido NAME LASTNAME</a>
+    <a class="welcomename" [routerLink]="['/login']">BIENVENIDO {{auth.currentUser.username}}</a>
   </nav>
 
 

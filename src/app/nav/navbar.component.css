@@ -1,5 +1,5 @@
-.a{
-    color: white;
+.nav-link{
+    color: rgb(255, 115, 0);
 }
 
 navbar navbar-dark bg-dark{
@@ -9,3 +9,8 @@ navbar navbar-dark bg-dark{
 .active{
     color: orange;
   }
+
+.welcomename{
+    color: rgb(0, 195, 255);
+    pointer-events: none;
+}

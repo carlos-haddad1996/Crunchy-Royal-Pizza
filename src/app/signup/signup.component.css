@@ -1,7 +1,7 @@
 
-.row
+.container
 {
-    padding-left: 40%;
+    padding-left: 20%;
     padding-bottom: 10px;
 }
 
@@ -54,3 +54,12 @@
     opacity: 1;
     right: 0;
   }
+
+  
+  label,button {color:rgb(255, 123, 0);}
+  em{float:right; color:#ff3e3eb2}
+  .error input {background-color:#E3C3C5;}
+  .error ::-webkit-input-placeholder { color: #999; }
+  .error ::-moz-placeholder { color: #999; }
+  .error :-moz-placeholder { color:#999; }
+  .error :ms-input-placeholder { color: #999; }

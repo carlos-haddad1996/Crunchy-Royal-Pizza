@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { ClassMainPageComponent } from './mainpage.component';
 import { ClassNavbaraComponent } from './nav/navbar.component';
-import { ClaseService } from './mainpage.service';
+
 import { RouterModule } from '@angular/router';
 import { AppRoutes } from './routes';
 import { ClasePizzaPage } from './pizza/pizza.component';
@@ -12,6 +12,9 @@ import { ClassLogin } from './login/login.component';
 import { ClassSignUp } from './signup/signup.component';
 import { ClassAddress } from './address/address.component';
 import { AgmCoreModule } from '@agm/core';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms"
+import { ClassCheckout } from './chekout/checkout.component';
+import { ClassServiceAuth } from './Shared/autorize.service';
 
 @NgModule({
   declarations: [
@@ -21,17 +24,20 @@ import { AgmCoreModule } from '@agm/core';
     ClaseMainContent,
     ClassLogin,
     ClassSignUp,
-    ClassAddress
+    ClassAddress,
+    ClassCheckout
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(AppRoutes),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAJGl5YlyWQwb3Zc-bOgmYt0tXdxzC_NsQ'
     })
   ],
-  providers: [ClaseService],
+  providers: [ClassServiceAuth],
   bootstrap: [ClaseMainContent]
 })
 export class AppModule { }
