@@ -2,17 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { ClassServiceAuth } from '../Shared/autorize.service';
 
 @Component({
-  selector: 'pizza',
-  templateUrl: './pizza.component.html',
-  styleUrls: ['./pizza.component.css']
+  selector: 'cart',
+  templateUrl: './cartpage.component.html',
+  styleUrls: ['./cartpage.component.css']
 
 })
-export class ClasePizzaPage implements OnInit{
+export class ClaseCartComponent implements OnInit{
 
   public pizzaMenu: any
+  
+
   constructor(private auth: ClassServiceAuth){}
 
-  ngOnInit (){
+  ngOnInit(){
     this.pizzaMenu = this.auth.getPizzaList();
   }
+
 }
+

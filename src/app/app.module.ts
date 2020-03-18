@@ -15,6 +15,8 @@ import { AgmCoreModule } from '@agm/core';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms"
 import { ClassCheckout } from './chekout/checkout.component';
 import { ClassServiceAuth } from './Shared/autorize.service';
+import { ClaseCartComponent } from './cart/cartpage.component';
+import { ClassAddPizza } from './addpizzaAdmin/addpizza.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ClassServiceAuth } from './Shared/autorize.service';
     ClassLogin,
     ClassSignUp,
     ClassAddress,
-    ClassCheckout
+    ClassCheckout,
+    ClaseCartComponent,
+    ClassAddPizza
   ],
   imports: [
     BrowserModule,

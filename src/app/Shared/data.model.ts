@@ -7,3 +7,12 @@ export interface IData
     password: string,
 
 }
+
+export interface IPizza
+{
+    id: number,
+    name: string,
+    description: string,
+    price: string,
+    image: string
+}

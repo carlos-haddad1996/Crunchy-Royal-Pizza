@@ -5,8 +5,10 @@ import { ClassLogin } from './login/login.component';
 import { ClassSignUp } from './signup/signup.component';
 import { ClassAddress } from './address/address.component';
 import { ClassCheckout } from './chekout/checkout.component';
+import { ClassAddPizza } from './addpizzaAdmin/addpizza.component';
 
 export const AppRoutes: Routes = [
+    {path: 'addpizza', component:ClassAddPizza},
     {path: 'checkout', component:ClassCheckout},
     {path: 'address', component:ClassAddress},
     {path: 'registro', component:ClassSignUp},

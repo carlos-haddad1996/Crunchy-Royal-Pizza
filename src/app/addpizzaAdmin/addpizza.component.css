@@ -4,6 +4,14 @@
     padding-bottom: 10px;
 }
 
+.container{
+  padding-left: 20%;
+}
+
+.imgcontainer{
+  width: 100px;
+}
+
 .cartwindow{
   padding-left: 0%;
   width: 65%;
@@ -13,6 +21,18 @@
 .loginbtn
 {
     width: 100%;
+}
+
+.mybtn{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #696969;
+  border: none;
+  color: #FFFFFF;
+  font-size: 19px;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
 .cancelbtn
@@ -27,6 +47,7 @@
     transition: all 0.5s;
     cursor: pointer;
 }
+
 
 .button {
     display: inline-block;
