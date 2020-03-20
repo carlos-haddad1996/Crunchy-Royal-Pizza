@@ -9,13 +9,13 @@ import { ClassServiceAuth } from '../Shared/autorize.service';
 })
 export class ClaseCartComponent implements OnInit{
 
-  public pizzaMenu: any
+  public checkArray: any
   
 
   constructor(private auth: ClassServiceAuth){}
 
   ngOnInit(){
-    this.pizzaMenu = this.auth.getPizzaList();
+    this.checkArray = this.auth.getCheckOut();
   }
 
 }

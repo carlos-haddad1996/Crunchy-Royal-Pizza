@@ -1,14 +1,16 @@
 <h1> Cart </h1>
 
-
-
-  <table class="table" *ngFor="let varname of pizzaMenu">
+<div class="myContainer">
+  <table class="table" *ngFor="let varname of checkArray">
     <tbody>
-      <tr >
+      <tr>
+        <th scope="row">{{varname?.id}}</th>
         <td class="tdinfo">{{varname?.name}}</td>
         <td class="tdinfo">{{varname?.price}}</td>
       </tr>
-      <tr>
     </tbody>
   </table>
-  
+</div>
+
+
+

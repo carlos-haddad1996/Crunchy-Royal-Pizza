@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
 })
 export class ClaseMainContent {
   title = 'Crunchy-Royal-Pizza';
+  
 }

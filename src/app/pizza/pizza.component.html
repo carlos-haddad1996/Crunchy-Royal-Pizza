@@ -30,7 +30,7 @@
   </div>
    -->
 
-  <table class="table" *ngFor="let varname of pizzaMenu">
+  <table class="table"  *ngFor="let varname of pizzaMenu" [routerLink] = "['/pizza', varname.id]">
     <tbody>
       <tr >
         <td  class="tdimage">
@@ -44,4 +44,3 @@
       <tr>
     </tbody>
   </table>
-

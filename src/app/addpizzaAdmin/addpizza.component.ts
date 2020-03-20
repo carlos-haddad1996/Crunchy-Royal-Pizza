@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
   selector: 'addpizza',
   templateUrl: './addpizza.component.html',
   styleUrls: ['./addpizza.component.css']
-
 })
 export class ClassAddPizza implements OnInit{
 
@@ -16,13 +15,13 @@ export class ClassAddPizza implements OnInit{
     idpizza:FormControl
     name:FormControl
     description:FormControl
-   price:FormControl
-   image:FormControl
-   newPizzaForm:FormGroup
+    price:FormControl
+    image:FormControl
+    newPizzaForm:FormGroup
 
-   public pizzaMenu: any
- 
-   constructor( private router: Router,private claseservice: ClassServiceAuth) {
+    public pizzaMenu: any
+  
+    constructor( private router: Router,private claseservice: ClassServiceAuth) {
     //regex - regular expressions 
     this.idpizza = new FormControl('',[Validators.required]);
     this.name = new FormControl('',[Validators.required]);
@@ -31,8 +30,6 @@ export class ClassAddPizza implements OnInit{
     this.image =  new FormControl('',[Validators.required]);
   }
 
-  
-   
   ngOnInit()
   {
       this.newPizzaForm = new FormGroup({

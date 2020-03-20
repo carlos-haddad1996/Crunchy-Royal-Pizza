@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core'
-import { IData, IPizza } from './data.model';
+import { IData, IPizza, ICheck } from './data.model';
 
 @Injectable()
 export class ClassServiceAuth
@@ -32,7 +32,12 @@ export class ClassServiceAuth
     getPizzaList()
     {
         return pizzaMenu;
-    }    
+    } 
+    
+    getCheckOut()
+    {
+        return checkArray;
+    } 
 
     objeto: any;
 
@@ -41,6 +46,18 @@ export class ClassServiceAuth
         pizzaMenu.push(this.objeto);
         //console.log(pizzaMenu);
     }  
+
+    objeto1: any;
+
+    getCreateCheckOut(id: string, name: string, price: string){
+        this.objeto1 = {id: id, name: name, price: price};
+        checkArray.push(this.objeto1);
+        //console.log(pizzaMenu);
+    }  
+
+    getPizzaById(id:number){
+        return pizzaMenu.find(clases => clases.id === id);
+    }
     
 
 }
@@ -56,6 +73,15 @@ const userData: IData[] =
     }
 ]
 
+
+const checkArray: ICheck[] =
+[
+    {
+        id: 999,
+        name: 'Demo',
+        price: 'Lps 0.00'
+    }
+]
 
 const pizzaMenu: IPizza[] = 
 [

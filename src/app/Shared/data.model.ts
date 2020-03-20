@@ -16,3 +16,10 @@ export interface IPizza
     price: string,
     image: string
 }
+
+export interface ICheck
+{
+    id: number,
+    name: string,
+    price: string
+}

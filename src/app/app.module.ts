@@ -17,6 +17,8 @@ import { ClassCheckout } from './chekout/checkout.component';
 import { ClassServiceAuth } from './Shared/autorize.service';
 import { ClaseCartComponent } from './cart/cartpage.component';
 import { ClassAddPizza } from './addpizzaAdmin/addpizza.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ClasePizzaDetail } from './pizzadetail/pizzadetail.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { ClassAddPizza } from './addpizzaAdmin/addpizza.component';
     ClassAddress,
     ClassCheckout,
     ClaseCartComponent,
-    ClassAddPizza
+    ClassAddPizza,
+    ClasePizzaDetail
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { ClassAddPizza } from './addpizzaAdmin/addpizza.component';
     RouterModule.forRoot(AppRoutes),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAJGl5YlyWQwb3Zc-bOgmYt0tXdxzC_NsQ'
-    })
+    }),
+    BrowserAnimationsModule
   ],
   providers: [ClassServiceAuth],
   bootstrap: [ClaseMainContent]
