@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core'
-import { IData, IPizza, ICheck } from './data.model';
+import { IData, IPizza, ICheck, IPostre } from './data.model';
 
 @Injectable()
 export class ClassServiceAuth
@@ -33,6 +33,11 @@ export class ClassServiceAuth
     {
         return pizzaMenu;
     } 
+
+    getPostreList()
+    {
+        return postresMenu;
+    }
     
     getCheckOut()
     {
@@ -57,6 +62,10 @@ export class ClassServiceAuth
 
     getPizzaById(id:number){
         return pizzaMenu.find(clases => clases.id === id);
+    }
+
+    getPostreById(id: number){
+        return postresMenu.find(clases => clases.id == id);
     }
     
 
@@ -122,3 +131,55 @@ const pizzaMenu: IPizza[] =
     }
 ]
 
+const postresMenu: IPostre[] =
+[
+
+    {
+        id: 201,
+        name: 'Tres Leches',
+        description: 'NONE',
+        price: 'Lps. ',
+        image: 'https://i2.wp.com/www.sugarspunrun.com/wp-content/uploads/2019/09/Tres-Leches-Cake-Recipe-1-of-1-500x375.jpg'
+    },
+
+    {
+        id: 202,
+        name: 'Sundae',
+        description: 'NONE',
+        price: 'Lps. ',
+        image: 'https://chowhound1.cbsistatic.com/thumbnail/800/0/chowhound1.cbsistatic.com/blog-media/2015/07/ice-cream-sundae-history-recipes-chowhound-670x585.jpg'
+    },
+
+    {
+        id: 203,
+        name: 'Flan de Coco',
+        description: 'NONE',
+        price: 'Lps. ',
+        image: 'https://www.recetashonduras.com/base/stock/Recipe/39-image/39-image_web.jpg'
+    },
+
+    {
+        id: 204,
+        name: 'Enrollado de Canela',
+        description: 'NONE',
+        price: 'Lps. ',
+        image: 'https://www.midiariodecocina.com/wp-content/uploads/2015/08/Rollos-de-canela01.jpg'
+    },
+
+    {
+        id: 205,
+        name: 'Cheesecake de fresa',
+        description: 'NONE',
+        price: 'Lps. ',
+        image: 'https://www.bakedbyanintrovert.com/wp-content/uploads/2018/05/Strawberry-Cheesecake-Recipe-Image-735x735.jpg'
+    },
+
+    {
+        id: 206,
+        name: 'Pie de Manzana',
+        description: 'NONE',
+        price: 'Lps. ',
+        image: 'https://www.simplyrecipes.com/wp-content/uploads/2014/09/apple-pie-horiz-a-1800.jpg'
+    }
+
+]

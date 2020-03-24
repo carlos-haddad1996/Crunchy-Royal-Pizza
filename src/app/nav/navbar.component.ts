@@ -6,7 +6,7 @@ import { ClassServiceAuth } from '../Shared/autorize.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class ClassNavbaraComponent {
+export class ClassNavbarComponent {
   title = 'Crunchy-Royal-Pizza';
   constructor(public auth:ClassServiceAuth) {
         

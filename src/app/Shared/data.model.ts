@@ -23,3 +23,12 @@ export interface ICheck
     name: string,
     price: string
 }
+
+export interface IPostre
+{
+    id: number,
+    name: string,
+    description: string,
+    price: string,
+    image: string
+}
