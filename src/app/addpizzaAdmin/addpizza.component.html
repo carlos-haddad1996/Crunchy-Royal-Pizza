@@ -5,32 +5,32 @@
       
       <form [formGroup]="newPizzaForm" autocomplete="off" (ngSubmit)="fnUpdate(newPizzaForm.value)" novalidate>
   
-        <div class="form-group" [ngClass]="{'error': NoValididProduct()}">
-          <label for="idpizza">ID Producto:</label>
-          <em *ngIf="NoValididProduct() && perfilForm.controls.idpizza?.errors.required">Este campo es requerido</em>
+        <div class="form-group" [ngClass]="{'error': NoValididId()}">
+          <label for="idpizza">ID Pizza:</label>
+          <em *ngIf="NoValididId() && newPizzaForm.controls.idpizza?.errors.required">Este campo es requerido</em>
           <input formControlName="idpizza" id="idpizza" type="text" class="form-control" placeholder="Pizza Id..." />
         </div>
   
         <div class="form-group" [ngClass]="{'error': NoValidNameProduct()}">
-          <label for="name">Nombre Producto:</label>
-          <em *ngIf="NoValidNameProduct() && perfilForm.controls.name?.errors.required">Este campo es requerido</em>
+          <label for="name">Nombre:</label>
+          <em *ngIf="NoValidNameProduct() && newPizzaForm.controls.name?.errors.required">Este campo es requerido</em>
           <input formControlName="name" id="name" type="text" class="form-control" placeholder="Nombre Producto..." />
         </div>
   
         <div class="form-group"  [ngClass]="{'error': NoValiddescription()}">
           <label for="description">Descripcion:</label>
-          <em *ngIf="NoValiddescription() && perfilForm.controls.description?.errors.required">Este campo es requerido</em>
+          <em *ngIf="NoValiddescription() && newPizzaForm.controls.description?.errors.required">Este campo es requerido</em>
           <input formControlName="description" id="description" type="text" class="form-control" placeholder="Descripcion del producto..." />
         </div>
   
         <div class="form-group"  [ngClass]="{'error': NoValidprecio()}">
           <label for="price">Precio:</label>
-          <em *ngIf="NoValidprecio() && perfilForm.controls.price?.errors.required">Este campo es requerido</em>
+          <em *ngIf="NoValidprecio() && newPizzaForm.controls.price?.errors.required">Este campo es requerido</em>
           <input formControlName="price" id="price" type="text" class="form-control" placeholder="Precio del producto..." />
         </div>
   
         <div class="form-group"  [ngClass]="{'error': NoValidimage()}">
-          <em *ngIf="NoValidimage() && perfilForm.controls.image?.errors.required">Este campo es requerido</em>
+          <em *ngIf="NoValidimage() && newPizzaForm.controls.image?.errors.required">Este campo es requerido</em>
           <label for="image">Imagen:</label>
           <input formControlName="image" id="image" type="text" class="form-control" placeholder="URL de la imagen" />
         </div>

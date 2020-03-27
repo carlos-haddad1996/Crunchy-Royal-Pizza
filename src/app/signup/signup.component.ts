@@ -65,7 +65,7 @@ export class ClassSignUp implements OnInit{
   }
 
   fnCancel(){
-    //this.router.navigate(['Productos']);
+    this.router.navigate(['home']);
   }
 
 }

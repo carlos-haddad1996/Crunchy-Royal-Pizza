@@ -43,13 +43,16 @@ export class ClassAddPizza implements OnInit{
   }
 
 
+  NoValididId(){
+    return this.idpizza.invalid && this.idpizza.touched;
+  }
+
+
   NoValidNameProduct(){
     return this.name.invalid && this.name.touched;
   }
 
-  NoValididProduct(){
-    return this.idpizza.invalid && this.idpizza.touched;
-  }
+  
 
   NoValiddescription(){
     return this.description.invalid && this.description.touched;

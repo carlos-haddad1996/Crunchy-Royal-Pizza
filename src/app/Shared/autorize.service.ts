@@ -85,7 +85,18 @@ export class ClassServiceAuth
     getComidaById(id: number){
         return comidasMenu.find(clases => clases.id == id);
     }
+
+    getAddPizza(id:number){
+        return pizzaMenu.find(clases => clases.id === id);
+    }
+
+    addToCart(obj:any){
+        checkArray.push(obj);
+    }
     
+    deletefromCart(obj:any){
+        checkArray.splice(checkArray.indexOf(obj), 1);
+    }
 
 }
 
@@ -104,9 +115,23 @@ const userData: IData[] =
 const checkArray: ICheck[] =
 [
     {
-        id: 999,
-        name: 'Demo',
-        price: 1
+
+        id: 1,
+        name: 'Brooklyn Pizza',
+        price: 295,
+    },
+
+    {
+        id: 2,
+        name: 'Supreme Pizza',
+        price: 210
+    },
+
+    {
+        id: 3,
+        name: 'Supreme Pizza',
+        price: 210
+
     }
 ]
 

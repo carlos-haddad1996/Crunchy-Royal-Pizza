@@ -16,5 +16,6 @@ export class ClasePizzaDetail implements OnInit{
 
   ngOnInit (){
     this.pizzaMenu = this.auth.getPizzaById(+this.actro.snapshot.params["id"]);
+    console.log(this.pizzaMenu)
   }
 }
