@@ -20,7 +20,11 @@ import { ClaseCartComponent } from './cart/cartpage.component';
 import { ClassAddPizza } from './addpizzaAdmin/addpizza.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClasePizzaDetail } from './pizzadetail/pizzadetail.component';
-import { ClasePostreDetail } from './postresDetail/postreDetail.component'
+import { ClasePostreDetail } from './postresDetail/postreDetail.component';
+import { ClaseBebidasPage } from './bebidas/bebidas.component';
+import { ClaseBebidasDetail } from './bebidasDetail/bebidasDetail.component';
+import { ClaseComidasPage } from './comidas/comidas.component';
+import { ClaseComidasDetail } from './comidasDetail/comidasDetail.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { ClasePostreDetail } from './postresDetail/postreDetail.component'
     ClassAddPizza,
     ClasePizzaDetail,
     ClasePostrePage,
-    ClasePostreDetail
+    ClasePostreDetail,
+    ClaseBebidasPage,
+    ClaseBebidasDetail,
+    ClaseComidasPage,
+    ClaseComidasDetail
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,9 @@
-<div class="postretitle">
-    <h1>MENU POSTRES</h1>
+<div class="comidastitle">
+    <h1>MENU COMIDAS</h1>
 </div>
 <br>
 
-<table class="table" *ngFor="let varname of postreMenu" [routerLink] = "['/postres', varname.id]">
+<table class="table" *ngFor="let varname of comidasMenu" [routerLink] = "['/comidas', varname.id]">
     <tbody>
         <tr>
             <td class="tdimage"><img class="imgcontainer" [src]=varname?.image/></td>
