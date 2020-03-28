@@ -11,12 +11,27 @@ export class ClassServiceAuth {
 
   loginUser(userName: string, password: string) {
     this.currentUser = {
-      id: 2,
       firstname: "Bruno",
       lastname: "Mars",
       username: userName,
       password: password
     };
+  }
+
+  addUser(
+    firstname: string,
+    lastname: string,
+    username: string,
+    password: string
+  ) {
+    const user: IData = {
+      firstname: firstname,
+      lastname: lastname,
+      username: username,
+      password: password
+    };
+
+    userData.push(user);
   }
 
   ActualizarUsuario(userName: string, Password: string) {
@@ -109,7 +124,6 @@ export class ClassServiceAuth {
 
 const userData: IData[] = [
   {
-    id: 1,
     firstname: "Lewis",
     lastname: "Hamilton",
     username: "lewis_22",
